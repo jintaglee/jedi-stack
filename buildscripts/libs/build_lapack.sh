@@ -37,9 +37,11 @@ export FCFLAGS="-fPIC"
 cd ${JEDI_STACK_ROOT}/${PKGDIR:-"pkg"}
 
 software=$name-$version
-url="http://www.netlib.org/lapack/$software.tgz"
-[[ -d $software ]] || ( wget $url; tar -xf $software.tgz )
-[[ -d $software ]] && cd $software || ( echo "$software does not exist, ABORT!"; exit 1 )
+srctar=${software}.tar.gz
+url="http://www.netlib.org/lapack/${srctar}"
+[[ -d $software ]] || ( wget $url && tar -xf ${srctar} ) \
+    || ( echo "URL '$url' for tarball '${srctar}' for '$software' does not exist, ABORT!"; exit 1 )
+[[ -d $software ]] && cd $software || ( echo "Directory $software does not exist, ABORT!"; exit 1 )
 [[ -d build ]] && rm -rf build
 mkdir -p build && cd build
 
