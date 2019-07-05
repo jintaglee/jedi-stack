@@ -16,7 +16,7 @@ load("hdf5/1.10.5")
 load("pnetcdf/1.11.2")
 load("netcdf/4.7.0")
 
-load("lapack/3.7.0")
+load("lapack/3.8.0")
 load("boost-headers/1.68.0")
 load("eigen/3.3.5")
 load("bufrlib/master")

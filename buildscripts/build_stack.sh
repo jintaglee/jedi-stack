@@ -79,7 +79,7 @@ $MODULES && (set +x; module purge; set -x)
     libs/build_szip.sh "2.1.1" 2>&1 | tee "$logdir/szip.log"
 
 [[ $STACK_BUILD_LAPACK =~ [yYtT] ]] && \
-    libs/build_lapack.sh "3.7.0" 2>&1 | tee "$logdir/lapack.log"
+    libs/build_lapack.sh "3.8.0" 2>&1 | tee "$logdir/lapack.log"
 
 [[ $STACK_BOOST_HEADERS  =~ [yYtT] ]] && \
     libs/build_boost.sh "1.68.0" "headers-only" 2>&1 | tee "$logdir/boost-headers.log"
