@@ -40,8 +40,8 @@ $SUDO python3 -m pip install -U xarray
 
 ## Python 3 - Workflow packages
 $SUDO python3 -m pip install -U click
-$SUDO python3 -m pip install -U ruamel
-$SUDO python3 -m pip install -U jinja
+$SUDO python3 -m pip install -U ruamel.yaml
+$SUDO python3 -m pip install -U jinja2
 $SUDO python3 -m pip install -U boto3
 $SUDO python3 -m pip install -U progressbar2
 
